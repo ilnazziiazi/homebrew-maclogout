@@ -2,7 +2,7 @@ class Macout < Formula
   desc "Lock screen scheduler for macOS — logs out during configured nighttime window"
   homepage "https://github.com/ilnazziiazi/macout"
   url "https://github.com/ilnazziiazi/macout/archive/refs/tags/v0.4.0.tar.gz"
-  sha256 "REPLACE_WITH_ACTUAL_SHA256"
+  sha256 "efb772771fc48dae2a377003a961c5bb83efa2dc3a001aa514b01fbaa90af8f7"
   license "MIT"
 
   def install
