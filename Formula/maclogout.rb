@@ -2,7 +2,7 @@ class Maclogout < Formula
   desc "Force-logout scheduler for macOS — logs out during configured nighttime window"
   homepage "https://github.com/ilnazziiazi/maclogout"
   url "https://github.com/ilnazziiazi/maclogout/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "7ea374f9add4509b7a492fde87ba25a405a3a4e0bc28f902498728aaa1cc840d "
+  sha256 "7ea374f9add4509b7a492fde87ba25a405a3a4e0bc28f902498728aaa1cc840d"
   license "MIT"
 
   def install
