@@ -1,22 +1,22 @@
-# homebrew-maclogout
+# homebrew-macout
 
-Homebrew tap for [maclogout](https://github.com/ilnazziiazi/maclogout) —
-a macOS force-logout scheduler.
+Homebrew tap for [macout](https://github.com/ilnazziiazi/macout) —
+a macOS lock screen scheduler.
 
 ## Install
 
 ```bash
-brew tap ilnazziiazi/maclogout
-brew install maclogout
-sudo cp $(brew --prefix)/opt/maclogout/launchd/com.maclogout.plist /Library/LaunchDaemons/
-sudo launchctl load /Library/LaunchDaemons/com.maclogout.plist
+brew tap ilnazziiazi/macout
+brew install macout
+sudo cp $(brew --prefix)/opt/macout/launchd/com.macout.plist /Library/LaunchDaemons/
+sudo launchctl load /Library/LaunchDaemons/com.macout.plist
 ```
 
 ## Uninstall
 
 ```bash
-sudo launchctl unload /Library/LaunchDaemons/com.maclogout.plist
-sudo rm /Library/LaunchDaemons/com.maclogout.plist
-brew uninstall maclogout
-brew untap ilnazziiazi/maclogout
+sudo launchctl unload /Library/LaunchDaemons/com.macout.plist
+sudo rm /Library/LaunchDaemons/com.macout.plist
+brew uninstall macout
+brew untap ilnazziiazi/macout
 ```
