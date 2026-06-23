@@ -1,7 +1,7 @@
 class Maclogout < Formula
   desc "Force-logout scheduler for macOS — logs out during configured nighttime window"
-  homepage "https://github.com/ilnaz/maclogout"
-  url "https://github.com/ilnaz/maclogout/archive/refs/tags/v1.0.0.tar.gz"
+  homepage "https://github.com/ilnazziiazi/maclogout"
+  url "https://github.com/ilnazziiazi/maclogout/archive/refs/tags/v1.0.0.tar.gz"
   sha256 "REPLACE_WITH_ACTUAL_SHA256"
   license "MIT"
 
@@ -9,6 +9,10 @@ class Maclogout < Formula
     bin.install "bin/maclogout"
     (etc/"maclogout").install "share/maclogout/config"
     (prefix/"launchd").install "launchd/com.maclogout.plist"
+
+    # Inject correct Homebrew paths for the current machine
+    inreplace bin/"maclogout", "@@HOMEBREW_ETC@@", etc.to_s
+    inreplace prefix/"launchd/com.maclogout.plist", "@@HOMEBREW_PREFIX@@", prefix.to_s
   end
 
   def caveats
@@ -21,6 +25,10 @@ class Maclogout < Formula
 
       To stop:
         sudo launchctl unload /Library/LaunchDaemons/com.maclogout.plist
+
+      Manage config:
+        maclogout --show
+        sudo maclogout --start 23 --end 6
 
       Logs: /var/log/maclogout.log
     EOS
